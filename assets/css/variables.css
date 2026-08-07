@@ -1,0 +1,128 @@
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   GLOBAL DESIGN SYSTEM
+   YEAR 24
+========================================================= */
+
+:root {
+
+    /* -----------------------------------------------------
+       BRAND COLORS
+    ----------------------------------------------------- */
+
+    --color-primary: #0b1f33;
+    --color-primary-dark: #071522;
+    --color-primary-light: #163a59;
+
+    --color-gold: #b08d57;
+    --color-gold-light: #d2b477;
+    --color-gold-dark: #8c6b3f;
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* -----------------------------------------------------
+       TEXT COLORS
+    ----------------------------------------------------- */
+
+    --color-text: #17212b;
+    --color-text-light: #5f6b76;
+    --color-text-muted: #89939c;
+    --color-text-white: #ffffff;
+
+    /* -----------------------------------------------------
+       BACKGROUNDS
+    ----------------------------------------------------- */
+
+    --color-background: #ffffff;
+    --color-background-light: #f5f6f7;
+    --color-background-dark: #0b1f33;
+    --color-background-section: #eef1f4;
+
+    /* -----------------------------------------------------
+       BORDERS
+    ----------------------------------------------------- */
+
+    --color-border: #dfe4e8;
+    --color-border-dark: #253746;
+
+    /* -----------------------------------------------------
+       TYPOGRAPHY
+    ----------------------------------------------------- */
+
+    --font-heading: "Georgia", "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 3rem;
+    --font-size-4xl: 4rem;
+
+    --line-height-tight: 1.15;
+    --line-height-normal: 1.6;
+    --line-height-wide: 1.8;
+
+    /* -----------------------------------------------------
+       LAYOUT
+    ----------------------------------------------------- */
+
+    --container-width: 1280px;
+    --container-padding: 2rem;
+
+    --header-height: 84px;
+
+    /* -----------------------------------------------------
+       SPACING
+    ----------------------------------------------------- */
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 5rem;
+    --space-10: 6rem;
+    --space-11: 8rem;
+
+    /* -----------------------------------------------------
+       BORDERS & RADIUS
+    ----------------------------------------------------- */
+
+    --radius-sm: 3px;
+    --radius-md: 6px;
+    --radius-lg: 12px;
+    --radius-xl: 20px;
+    --radius-round: 999px;
+
+    /* -----------------------------------------------------
+       SHADOWS
+    ----------------------------------------------------- */
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 16px 45px rgba(0, 0, 0, 0.15);
+
+    /* -----------------------------------------------------
+       TRANSITIONS
+    ----------------------------------------------------- */
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* -----------------------------------------------------
+       Z-INDEX
+    ----------------------------------------------------- */
+
+    --z-base: 1;
+    --z-header: 1000;
+    --z-dropdown: 1100;
+    --z-modal: 2000;
+}

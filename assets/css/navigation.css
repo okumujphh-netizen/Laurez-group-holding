@@ -1,0 +1,269 @@
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   GLOBAL NAVIGATION
+   YEAR 24
+========================================================= */
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: var(--color-white);
+
+    border-bottom: 1px solid var(--color-border);
+
+    transition:
+        background var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.header-container {
+    min-height: var(--header-height);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-6);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    line-height: 1;
+
+    color: var(--color-primary);
+}
+
+.logo-name {
+    font-family: var(--font-heading);
+
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.logo-subtitle {
+    margin-top: 5px;
+
+    color: var(--color-gold);
+
+    font-size: 0.55rem;
+    font-weight: 700;
+
+    letter-spacing: 0.24em;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-5);
+}
+
+.main-nav a {
+    position: relative;
+
+    padding:
+        var(--space-2)
+        0;
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition-fast);
+}
+
+
+/* ---------------------------------------------------------
+   NAVIGATION UNDERLINE
+--------------------------------------------------------- */
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--color-gold);
+
+    transform:
+        scaleX(0);
+
+    transform-origin: right;
+
+    transition:
+        transform var(--transition-normal);
+}
+
+.main-nav a:hover {
+    color: var(--color-gold);
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+
+    transform-origin: left;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--color-primary);
+
+    font-size: 1.5rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.menu-toggle:hover {
+    background: var(--color-primary);
+
+    color: var(--color-white);
+
+    border-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        min-height: var(--header-height);
+    }
+
+    .main-nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding:
+            var(--space-3)
+            var(--container-padding);
+
+        background: var(--color-white);
+
+        border-bottom:
+            1px solid
+            var(--color-border);
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+
+        padding: var(--space-4) 0;
+
+        border-bottom:
+            1px solid
+            var(--color-border);
+    }
+
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav a::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo-name {
+        font-size: 1.4rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.48rem;
+    }
+
+}

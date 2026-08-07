@@ -1,0 +1,524 @@
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   GLOBAL LAYOUT SYSTEM
+   YEAR 24
+========================================================= */
+
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+main {
+    width: 100%;
+    flex: 1;
+}
+
+
+/* =========================================================
+   CONTAINER VARIATIONS
+========================================================= */
+
+.container-wide {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        1600px
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-narrow {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        850px
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   FLEX UTILITIES
+========================================================= */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   GRID UTILITIES
+========================================================= */
+
+.grid {
+    display: grid;
+}
+
+.grid-2 {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-6);
+}
+
+.grid-3 {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: var(--space-6);
+}
+
+.grid-4 {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: var(--space-6);
+}
+
+
+/* =========================================================
+   TWO COLUMN CONTENT
+========================================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: var(--space-10);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   THREE COLUMN CONTENT
+========================================================= */
+
+.three-column {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: var(--space-6);
+}
+
+
+/* =========================================================
+   CONTENT + SIDEBAR
+========================================================= */
+
+.content-sidebar {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        320px;
+
+    gap: var(--space-10);
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR + CONTENT
+========================================================= */
+
+.sidebar-content {
+    display: grid;
+
+    grid-template-columns:
+        320px
+        minmax(0, 1fr);
+
+    gap: var(--space-10);
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   IMAGE + CONTENT
+========================================================= */
+
+.image-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: var(--space-8);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CONTENT + IMAGE
+========================================================= */
+
+.content-image {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: var(--space-8);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   STACK
+========================================================= */
+
+.stack {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-5);
+}
+
+.stack-small {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-3);
+}
+
+.stack-large {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-8);
+}
+
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.row {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-4);
+}
+
+
+/* =========================================================
+   CENTERED CONTENT
+========================================================= */
+
+.center-content {
+    max-width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FULL WIDTH
+========================================================= */
+
+.full-width {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SPACING UTILITIES
+========================================================= */
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-1 {
+    margin-top: var(--space-1);
+}
+
+.mt-2 {
+    margin-top: var(--space-2);
+}
+
+.mt-3 {
+    margin-top: var(--space-3);
+}
+
+.mt-4 {
+    margin-top: var(--space-4);
+}
+
+.mt-5 {
+    margin-top: var(--space-5);
+}
+
+.mt-6 {
+    margin-top: var(--space-6);
+}
+
+.mt-7 {
+    margin-top: var(--space-7);
+}
+
+.mt-8 {
+    margin-top: var(--space-8);
+}
+
+
+/* =========================================================
+   BOTTOM SPACING
+========================================================= */
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-2 {
+    margin-bottom: var(--space-2);
+}
+
+.mb-3 {
+    margin-bottom: var(--space-3);
+}
+
+.mb-4 {
+    margin-bottom: var(--space-4);
+}
+
+.mb-5 {
+    margin-bottom: var(--space-5);
+}
+
+.mb-6 {
+    margin-bottom: var(--space-6);
+}
+
+.mb-7 {
+    margin-bottom: var(--space-7);
+}
+
+.mb-8 {
+    margin-bottom: var(--space-8);
+}
+
+
+/* =========================================================
+   SECTION ALIGNMENT
+========================================================= */
+
+.section-center {
+    text-align: center;
+}
+
+.section-center .section-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   VERTICAL CENTERING
+========================================================= */
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+
+/* =========================================================
+   JUSTIFICATION
+========================================================= */
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+
+/* =========================================================
+   OVERFLOW
+========================================================= */
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   POSITIONING
+========================================================= */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky;
+}
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .grid-4 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .content-sidebar {
+        grid-template-columns:
+            minmax(0, 1fr)
+            280px;
+
+        gap: var(--space-7);
+    }
+
+    .sidebar-content {
+        grid-template-columns:
+            280px
+            minmax(0, 1fr);
+
+        gap: var(--space-7);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column,
+    .three-column,
+    .image-content,
+    .content-image {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-6);
+    }
+
+    .content-sidebar,
+    .sidebar-content {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-6);
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container,
+    .container-wide,
+    .container-narrow {
+        width: min(
+            calc(100% - 32px),
+            100%
+        );
+    }
+
+    .stack-large {
+        gap: var(--space-6);
+    }
+
+}

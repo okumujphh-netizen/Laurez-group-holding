@@ -1,0 +1,123 @@
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   GLOBAL FOOTER
+   YEAR 24
+========================================================= */
+
+.site-footer {
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        repeat(3, 1fr);
+
+    gap: var(--space-8);
+
+    padding: var(--space-10) 0;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-brand .logo-name {
+    color: var(--color-white);
+}
+
+.footer-brand p {
+    margin-top: var(--space-5);
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-wide);
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-3);
+}
+
+.footer-column h3 {
+    margin-bottom: var(--space-2);
+
+    color: var(--color-gold);
+
+    font-size: var(--font-size-sm);
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.footer-column a {
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: var(--font-size-sm);
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.footer-column a:hover {
+    color: var(--color-white);
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-5);
+
+    padding: var(--space-5) 0;
+
+    border-top: 1px solid var(--color-border-dark);
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: var(--font-size-xs);
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: var(--space-5);
+}
+
+.footer-bottom a {
+    transition: color var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+    color: var(--color-white);
+}

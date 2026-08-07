@@ -1,0 +1,109 @@
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   RESPONSIVE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    :root {
+        --container-padding: 1.5rem;
+    }
+
+    .main-nav {
+        gap: var(--space-4);
+    }
+
+    .main-nav a {
+        font-size: 0.8rem;
+    }
+
+    .two-column {
+        gap: var(--space-6);
+    }
+
+    .three-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .four-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --container-padding: 1.25rem;
+        --header-height: 72px;
+    }
+
+    .section {
+        padding: var(--space-8) 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .two-column,
+    .three-column,
+    .four-column {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom div {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        --container-padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+}

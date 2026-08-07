@@ -1,0 +1,626 @@
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   HOMEPAGE STYLES
+   YEAR 24
+========================================================= */
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - var(--header-height));
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 21, 34, 0.96) 0%,
+            rgba(7, 21, 34, 0.85) 42%,
+            rgba(7, 21, 34, 0.50) 100%
+        ),
+        url("../../images/hero/home-hero.jpg")
+        center / cover no-repeat;
+
+    color: var(--color-white);
+}
+
+
+/* ---------------------------------------------------------
+   HERO FALLBACK BACKGROUND
+--------------------------------------------------------- */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary-dark),
+            var(--color-primary-light)
+        );
+
+    z-index: -2;
+}
+
+
+/* ---------------------------------------------------------
+   HERO CONTENT
+--------------------------------------------------------- */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding-top: var(--space-11);
+    padding-bottom: var(--space-11);
+}
+
+
+/* ---------------------------------------------------------
+   HERO LABEL
+--------------------------------------------------------- */
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: var(--space-5);
+
+    color: var(--color-gold-light);
+
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   HERO TITLE
+--------------------------------------------------------- */
+
+.hero h1 {
+    max-width: 850px;
+
+    margin-bottom: var(--space-5);
+
+    color: var(--color-white);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        3rem,
+        7vw,
+        6rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.02;
+
+    letter-spacing: -0.03em;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--color-gold-light);
+}
+
+
+/* ---------------------------------------------------------
+   HERO DESCRIPTION
+--------------------------------------------------------- */
+
+.hero p {
+    max-width: 680px;
+
+    margin-bottom: var(--space-7);
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: clamp(
+        1rem,
+        2vw,
+        1.25rem
+    );
+
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   HERO BUTTONS
+--------------------------------------------------------- */
+
+.hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-4);
+}
+
+
+/* =========================================================
+   INTRODUCTION SECTION
+========================================================= */
+
+.introduction {
+    background: var(--color-white);
+}
+
+.introduction .section-header {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   GROUP STATISTICS
+========================================================= */
+
+.statistics {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+
+    background: var(--color-primary);
+
+    color: var(--color-white);
+}
+
+.statistics-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+}
+
+.stat {
+    padding: var(--space-6);
+
+    text-align: center;
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    display: block;
+
+    margin-bottom: var(--space-2);
+
+    color: var(--color-gold-light);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.stat span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: var(--font-size-xs);
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   BUSINESSES PREVIEW
+========================================================= */
+
+.businesses-preview {
+    background: var(--color-background-light);
+}
+
+.business-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: var(--color-border);
+}
+
+.businesses-preview .business-card {
+    border: none;
+}
+
+.businesses-preview .section-action {
+    margin-top: var(--space-7);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FEATURED PROJECTS
+========================================================= */
+
+.projects-preview {
+    background: var(--color-white);
+}
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: var(--space-5);
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT IMAGE
+--------------------------------------------------------- */
+
+.project-image {
+    position: relative;
+
+    aspect-ratio: 16 / 10;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: var(--space-4);
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary),
+            var(--color-primary-light)
+        );
+}
+
+.project-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(7, 21, 34, 0.75),
+            transparent 60%
+        );
+}
+
+.project-image span {
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--color-gold-light);
+
+    font-size: var(--font-size-xs);
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT CONTENT
+--------------------------------------------------------- */
+
+.project-content {
+    padding: var(--space-5);
+}
+
+.project-content small {
+    display: block;
+
+    margin-bottom: var(--space-3);
+
+    color: var(--color-gold);
+
+    font-size: var(--font-size-xs);
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.project-content h3 {
+    margin-bottom: var(--space-3);
+
+    color: var(--color-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--font-size-xl);
+
+    font-weight: 500;
+
+    line-height: var(--line-height-tight);
+}
+
+.project-content p {
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-sm);
+
+    line-height: var(--line-height-normal);
+}
+
+
+/* =========================================================
+   HOMEPAGE CTA
+========================================================= */
+
+.cta {
+    position: relative;
+
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+
+    overflow: hidden;
+
+    background: var(--color-primary);
+
+    color: var(--color-white);
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   DECORATIVE CIRCLE 1
+--------------------------------------------------------- */
+
+.cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -300px;
+    right: -150px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.25);
+
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------------
+   DECORATIVE CIRCLE 2
+--------------------------------------------------------- */
+
+.cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    bottom: -550px;
+    left: -250px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.15);
+
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------------
+   CTA CONTENT
+--------------------------------------------------------- */
+
+.cta .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+.cta .section-label {
+    color: var(--color-gold-light);
+}
+
+.cta h2 {
+    margin-bottom: var(--space-4);
+
+    color: var(--color-white);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1.1;
+}
+
+.cta p {
+    max-width: 600px;
+
+    margin:
+        0
+        auto
+        var(--space-6);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HOMEPAGE RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .business-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height:
+            calc(
+                100vh -
+                var(--header-height)
+            );
+    }
+
+    .hero-content {
+        padding-top: var(--space-9);
+        padding-bottom: var(--space-9);
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                2.8rem,
+                12vw,
+                4.5rem
+            );
+    }
+
+    .hero-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        max-width: 320px;
+    }
+
+    .statistics-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stat {
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.15);
+    }
+
+    .stat:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat:nth-child(3),
+    .stat:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .business-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.7rem;
+
+        letter-spacing: -0.02em;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat,
+    .stat:nth-child(2) {
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.15);
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
