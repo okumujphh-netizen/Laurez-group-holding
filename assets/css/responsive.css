@@ -1,42 +1,180 @@
 /* =========================================================
    LAUREZ GROUP HOLDINGS
-   RESPONSIVE DESIGN
+   GLOBAL RESPONSIVE SYSTEM
+   YEAR 24
 ========================================================= */
 
 
 /* =========================================================
-   TABLETS
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        --container-padding: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP / TABLET
 ========================================================= */
 
 @media (max-width: 1024px) {
 
     :root {
-        --container-padding: 1.5rem;
+        --container-padding: 40px;
     }
 
-    .main-nav {
-        gap: var(--space-4);
+
+    /* ---------------------------------------------
+       TYPOGRAPHY
+    --------------------------------------------- */
+
+    h1 {
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
     }
 
-    .main-nav a {
-        font-size: 0.8rem;
+    h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
     }
 
-    .two-column {
-        gap: var(--space-6);
+
+    /* ---------------------------------------------
+       CONTAINERS
+    --------------------------------------------- */
+
+    .container,
+    .container-wide,
+    .container-narrow {
+        width: min(
+            calc(100% - (var(--container-padding) * 2)),
+            var(--container-width)
+        );
     }
 
-    .three-column {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* ---------------------------------------------
+       SECTIONS
+    --------------------------------------------- */
+
+    .section {
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-10);
     }
 
-    .four-column {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --container-padding: 28px;
     }
+
+
+    /* ---------------------------------------------
+       GLOBAL
+    --------------------------------------------- */
+
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* ---------------------------------------------
+       TYPOGRAPHY
+    --------------------------------------------- */
+
+    h1 {
+        font-size: clamp(2.4rem, 9vw, 3.6rem);
+
+        line-height: 1.05;
+    }
+
+    h2 {
+        font-size: clamp(1.9rem, 6vw, 2.7rem);
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+
+    /* ---------------------------------------------
+       CONTAINER
+    --------------------------------------------- */
+
+    .container,
+    .container-wide,
+    .container-narrow {
+        width: calc(100% - (var(--container-padding) * 2));
+
+        max-width: none;
+    }
+
+
+    /* ---------------------------------------------
+       SECTIONS
+    --------------------------------------------- */
+
+    .section {
+        padding-top: var(--space-9);
+        padding-bottom: var(--space-9);
+    }
+
+
+    /* ---------------------------------------------
+       SECTION HEADER
+    --------------------------------------------- */
+
+    .section-header {
+        margin-bottom: var(--space-7);
+    }
+
+    .section-description {
+        max-width: 100%;
+    }
+
+
+    /* ---------------------------------------------
+       BUTTONS
+    --------------------------------------------- */
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    /* ---------------------------------------------
+       FOOTER
+    --------------------------------------------- */
 
     .footer-main {
-        grid-template-columns: repeat(2, 1fr);
+        padding-top: var(--space-9);
+        padding-bottom: var(--space-8);
     }
+
 }
 
 
@@ -44,66 +182,184 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     :root {
-        --container-padding: 1.25rem;
-        --header-height: 72px;
+        --container-padding: 20px;
     }
+
+
+    /* ---------------------------------------------
+       TYPOGRAPHY
+    --------------------------------------------- */
+
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: clamp(2.2rem, 11vw, 3.1rem);
+    }
+
+    h2 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+
+    /* ---------------------------------------------
+       SECTION
+    --------------------------------------------- */
 
     .section {
-        padding: var(--space-8) 0;
+        padding-top: 64px;
+        padding-bottom: 64px;
     }
 
-    .main-nav {
-        display: none;
+
+    /* ---------------------------------------------
+       BUTTON
+    --------------------------------------------- */
+
+    .btn {
+        width: 100%;
+
+        justify-content: center;
     }
 
-    .menu-toggle {
-        display: flex;
+
+    /* ---------------------------------------------
+       TABLE
+    --------------------------------------------- */
+
+    .table-wrapper {
+        margin-right: calc(
+            var(--container-padding) * -1
+        );
+
+        margin-left: calc(
+            var(--container-padding) * -1
+        );
+
+        width: calc(
+            100% +
+            (var(--container-padding) * 2)
+        );
     }
 
-    .two-column,
-    .three-column,
-    .four-column {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-bottom div {
-        flex-wrap: wrap;
-    }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   SMALL PHONE
 ========================================================= */
 
 @media (max-width: 480px) {
 
     :root {
-        --container-padding: 1rem;
+        --container-padding: 16px;
     }
 
-    .section-title {
+
+    /* ---------------------------------------------
+       TYPOGRAPHY
+    --------------------------------------------- */
+
+    h1 {
+        font-size: 2.15rem;
+
+        line-height: 1.08;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+
+    /* ---------------------------------------------
+       SECTION
+    --------------------------------------------- */
+
+    .section {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+
+    /* ---------------------------------------------
+       CONTAINER
+    --------------------------------------------- */
+
+    .container,
+    .container-wide,
+    .container-narrow {
+        width: calc(100% - 32px);
+    }
+
+
+    /* ---------------------------------------------
+       HERO
+    --------------------------------------------- */
+
+    .hero {
+        min-height: 620px;
+    }
+
+
+    /* ---------------------------------------------
+       STATISTICS
+    --------------------------------------------- */
+
+    .statistics-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* ---------------------------------------------
+       BUSINESS CARDS
+    --------------------------------------------- */
+
+    .business-card {
+        padding: 24px;
+    }
+
+
+    /* ---------------------------------------------
+       FOOTER
+    --------------------------------------------- */
+
+    .footer-bottom {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    :root {
+        --container-padding: 14px;
+    }
+
+    .container,
+    .container-wide,
+    .container-narrow {
+        width: calc(100% - 28px);
+    }
+
+    h1 {
         font-size: 2rem;
     }
 
-    .btn {
-        width: 100%;
+    .hero {
+        min-height: 580px;
     }
 
-    .hero-actions {
-        flex-direction: column;
-    }
 }

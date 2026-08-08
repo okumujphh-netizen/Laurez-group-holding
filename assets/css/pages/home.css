@@ -1,6 +1,6 @@
 /* =========================================================
    LAUREZ GROUP HOLDINGS
-   HOMEPAGE STYLES
+   HOMEPAGE
    YEAR 24
 ========================================================= */
 
@@ -12,9 +12,10 @@
 .hero {
     position: relative;
 
-    min-height: calc(100vh - var(--header-height));
+    min-height: 720px;
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
@@ -23,95 +24,132 @@
         linear-gradient(
             90deg,
             rgba(7, 21, 34, 0.96) 0%,
-            rgba(7, 21, 34, 0.85) 42%,
-            rgba(7, 21, 34, 0.50) 100%
+            rgba(7, 21, 34, 0.86) 42%,
+            rgba(7, 21, 34, 0.48) 75%,
+            rgba(7, 21, 34, 0.32) 100%
         ),
-        url("../../images/hero/home-hero.jpg")
+        url("../../images/hero/home-hero.png")
         center / cover no-repeat;
 
     color: var(--color-white);
 }
 
 
-/* ---------------------------------------------------------
-   HERO FALLBACK BACKGROUND
---------------------------------------------------------- */
+/* =========================================================
+   HERO DECORATIVE ELEMENT
+========================================================= */
 
 .hero::before {
     content: "";
 
     position: absolute;
-    inset: 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--color-primary-dark),
-            var(--color-primary-light)
-        );
+    right: -120px;
+    bottom: -180px;
 
-    z-index: -2;
+    width: 500px;
+    height: 500px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    right: 80px;
+    bottom: -80px;
+
+    width: 300px;
+    height: 300px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.35);
+
+    border-radius: 50%;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    HERO CONTENT
---------------------------------------------------------- */
+========================================================= */
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
-    max-width: 900px;
+    max-width: 850px;
 
-    padding-top: var(--space-11);
-    padding-bottom: var(--space-11);
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    HERO LABEL
---------------------------------------------------------- */
+========================================================= */
 
 .hero-label {
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
 
     margin-bottom: var(--space-5);
 
     color: var(--color-gold-light);
 
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
+
     font-weight: 700;
 
     letter-spacing: 0.18em;
+
     text-transform: uppercase;
 }
 
+.hero-label::before {
+    content: "";
 
-/* ---------------------------------------------------------
-   HERO TITLE
---------------------------------------------------------- */
+    width: 35px;
+    height: 1px;
+
+    margin-right: var(--space-3);
+
+    background: var(--color-gold);
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
 
 .hero h1 {
     max-width: 850px;
 
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-6);
 
     color: var(--color-white);
 
     font-family: var(--font-heading);
 
     font-size: clamp(
-        3rem,
+        3.5rem,
         7vw,
-        6rem
+        6.5rem
     );
 
     font-weight: 500;
 
-    line-height: 1.02;
+    line-height: 0.98;
 
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
 }
 
 .hero h1 span {
@@ -121,42 +159,60 @@
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    HERO DESCRIPTION
---------------------------------------------------------- */
+========================================================= */
 
 .hero p {
     max-width: 680px;
 
-    margin-bottom: var(--space-7);
+    margin-bottom: var(--space-8);
 
     color: rgba(255, 255, 255, 0.78);
 
-    font-size: clamp(
-        1rem,
-        2vw,
-        1.25rem
-    );
+    font-size: var(--font-size-lg);
 
-    line-height: 1.8;
+    line-height: var(--line-height-wide);
 }
 
 
-/* ---------------------------------------------------------
-   HERO BUTTONS
---------------------------------------------------------- */
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
 
 .hero-actions {
     display: flex;
 
     align-items: center;
 
+    flex-wrap: wrap;
+
     gap: var(--space-4);
 }
 
 
 /* =========================================================
-   INTRODUCTION SECTION
+   HERO BUTTON OVERRIDE
+========================================================= */
+
+.hero .btn-outline {
+    border-color:
+        rgba(255, 255, 255, 0.45);
+
+    color: var(--color-white);
+}
+
+.hero .btn-outline:hover {
+    border-color: var(--color-white);
+
+    background: var(--color-white);
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   INTRODUCTION
 ========================================================= */
 
 .introduction {
@@ -164,17 +220,18 @@
 }
 
 .introduction .section-header {
-    margin-bottom: 0;
+    max-width: 850px;
 }
 
 
 /* =========================================================
-   GROUP STATISTICS
+   STATISTICS
 ========================================================= */
 
 .statistics {
-    padding-top: var(--space-8);
-    padding-bottom: var(--space-8);
+    padding:
+        var(--space-8)
+        0;
 
     background: var(--color-primary);
 
@@ -187,27 +244,27 @@
     grid-template-columns:
         repeat(4, 1fr);
 
-    border-top:
-        1px solid
-        rgba(255, 255, 255, 0.15);
+    gap: 1px;
 
-    border-bottom:
-        1px solid
-        rgba(255, 255, 255, 0.15);
+    background:
+        rgba(255, 255, 255, 0.12);
 }
 
 .stat {
-    padding: var(--space-6);
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 150px;
+
+    padding: var(--space-5);
+
+    background: var(--color-primary);
 
     text-align: center;
-
-    border-right:
-        1px solid
-        rgba(255, 255, 255, 0.15);
-}
-
-.stat:last-child {
-    border-right: none;
 }
 
 .stat strong {
@@ -220,9 +277,9 @@
     font-family: var(--font-heading);
 
     font-size: clamp(
-        2.5rem,
-        5vw,
-        4rem
+        2rem,
+        4vw,
+        3.2rem
     );
 
     font-weight: 500;
@@ -231,15 +288,13 @@
 }
 
 .stat span {
-    display: block;
-
     color: rgba(255, 255, 255, 0.65);
 
     font-size: var(--font-size-xs);
 
     font-weight: 700;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
 
     text-transform: uppercase;
 }
@@ -250,33 +305,42 @@
 ========================================================= */
 
 .businesses-preview {
-    background: var(--color-background-light);
+    background:
+        var(--color-background-light);
 }
 
 .business-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: 1px;
 
     background: var(--color-border);
+
+    border:
+        1px solid
+        var(--color-border);
 }
 
 .businesses-preview .business-card {
     border: none;
+
+    border-radius: 0;
 }
 
-.businesses-preview .section-action {
-    margin-top: var(--space-7);
+.section-action {
+    display: flex;
 
-    text-align: center;
+    justify-content: center;
+
+    margin-top: var(--space-8);
 }
 
 
 /* =========================================================
-   FEATURED PROJECTS
+   PROJECTS PREVIEW
 ========================================================= */
 
 .projects-preview {
@@ -287,26 +351,25 @@
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
     gap: var(--space-5);
 }
 
-
-/* ---------------------------------------------------------
-   PROJECT IMAGE
---------------------------------------------------------- */
+.project-card {
+    min-width: 0;
+}
 
 .project-image {
     position: relative;
 
-    aspect-ratio: 16 / 10;
+    min-height: 280px;
 
     display: flex;
 
     align-items: flex-end;
 
-    padding: var(--space-4);
+    padding: var(--space-5);
 
     overflow: hidden;
 
@@ -314,11 +377,13 @@
         linear-gradient(
             135deg,
             var(--color-primary),
-            var(--color-primary-light)
+            #243b4f
         );
+
+    color: var(--color-white);
 }
 
-.project-image::after {
+.project-image::before {
     content: "";
 
     position: absolute;
@@ -328,34 +393,42 @@
     background:
         linear-gradient(
             to top,
-            rgba(7, 21, 34, 0.75),
-            transparent 60%
+            rgba(7, 21, 34, 0.85),
+            transparent 65%
         );
 }
 
 .project-image span {
     position: relative;
 
-    z-index: 2;
+    z-index: 1;
 
-    color: var(--color-gold-light);
+    padding:
+        7px
+        12px;
+
+    background:
+        rgba(176, 141, 87, 0.95);
+
+    color: var(--color-white);
 
     font-size: var(--font-size-xs);
 
     font-weight: 700;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
 
     text-transform: uppercase;
 }
 
-
-/* ---------------------------------------------------------
-   PROJECT CONTENT
---------------------------------------------------------- */
-
 .project-content {
     padding: var(--space-5);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-top: none;
 }
 
 .project-content small {
@@ -369,7 +442,7 @@
 
     font-weight: 700;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
 }
 
 .project-content h3 {
@@ -382,8 +455,6 @@
     font-size: var(--font-size-xl);
 
     font-weight: 500;
-
-    line-height: var(--line-height-tight);
 }
 
 .project-content p {
@@ -396,14 +467,15 @@
 
 
 /* =========================================================
-   HOMEPAGE CTA
+   CALL TO ACTION
 ========================================================= */
 
 .cta {
     position: relative;
 
-    padding-top: var(--space-10);
-    padding-bottom: var(--space-10);
+    padding:
+        var(--space-12)
+        0;
 
     overflow: hidden;
 
@@ -414,61 +486,28 @@
     text-align: center;
 }
 
-
-/* ---------------------------------------------------------
-   DECORATIVE CIRCLE 1
---------------------------------------------------------- */
-
 .cta::before {
     content: "";
 
     position: absolute;
 
-    width: 500px;
-    height: 500px;
-
-    top: -300px;
+    top: -200px;
     right: -150px;
 
-    border:
-        1px solid
-        rgba(176, 141, 87, 0.25);
-
-    border-radius: 50%;
-}
-
-
-/* ---------------------------------------------------------
-   DECORATIVE CIRCLE 2
---------------------------------------------------------- */
-
-.cta::after {
-    content: "";
-
-    position: absolute;
-
-    width: 700px;
-    height: 700px;
-
-    bottom: -550px;
-    left: -250px;
+    width: 450px;
+    height: 450px;
 
     border:
         1px solid
-        rgba(176, 141, 87, 0.15);
+        rgba(176, 141, 87, 0.3);
 
     border-radius: 50%;
 }
-
-
-/* ---------------------------------------------------------
-   CTA CONTENT
---------------------------------------------------------- */
 
 .cta .container {
     position: relative;
 
-    z-index: 2;
+    z-index: 1;
 }
 
 .cta .section-label {
@@ -480,17 +519,11 @@
 
     color: var(--color-white);
 
-    font-family: var(--font-heading);
-
     font-size: clamp(
-        2.5rem,
+        2.2rem,
         5vw,
         4rem
     );
-
-    font-weight: 500;
-
-    line-height: 1.1;
 }
 
 .cta p {
@@ -499,11 +532,12 @@
     margin:
         0
         auto
-        var(--space-6);
+        var(--space-7);
 
-    color: rgba(255, 255, 255, 0.7);
+    color:
+        rgba(255, 255, 255, 0.7);
 
-    line-height: 1.8;
+    font-size: var(--font-size-lg);
 }
 
 
@@ -513,14 +547,14 @@
 
 @media (max-width: 1024px) {
 
-    .business-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
+    .hero {
+        min-height: 650px;
     }
 
+    .business-grid,
     .project-grid {
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -529,33 +563,27 @@
 @media (max-width: 768px) {
 
     .hero {
-        min-height:
-            calc(
-                100vh -
-                var(--header-height)
-            );
+        min-height: 650px;
+
+        background-position:
+            65% center;
     }
 
     .hero-content {
-        padding-top: var(--space-9);
-        padding-bottom: var(--space-9);
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
     }
 
     .hero h1 {
-        font-size:
-            clamp(
-                2.8rem,
-                12vw,
-                4.5rem
-            );
+        font-size: clamp(
+            2.8rem,
+            10vw,
+            4.5rem
+        );
     }
 
-    .hero-actions {
-        align-items: stretch;
-
-        flex-direction: column;
-
-        max-width: 320px;
+    .hero p {
+        font-size: var(--font-size-md);
     }
 
     .statistics-grid {
@@ -563,28 +591,13 @@
             repeat(2, 1fr);
     }
 
-    .stat {
-        border-bottom:
-            1px solid
-            rgba(255, 255, 255, 0.15);
-    }
-
-    .stat:nth-child(2) {
-        border-right: none;
-    }
-
-    .stat:nth-child(3),
-    .stat:nth-child(4) {
-        border-bottom: none;
-    }
-
-    .business-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
+    .business-grid,
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        min-height: 240px;
     }
 
 }
@@ -592,35 +605,51 @@
 
 @media (max-width: 480px) {
 
-    .hero h1 {
-        font-size: 2.7rem;
+    .hero {
+        min-height: 620px;
 
-        letter-spacing: -0.02em;
+        background-position:
+            68% center;
+    }
+
+    .hero-label {
+        font-size: 0.65rem;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
-    .statistics-grid {
-        grid-template-columns: 1fr;
+    .statistics {
+        padding:
+            var(--space-5)
+            0;
     }
 
-    .stat,
-    .stat:nth-child(2) {
-        border-right: none;
+    .stat {
+        min-height: 125px;
 
-        border-bottom:
-            1px solid
-            rgba(255, 255, 255, 0.15);
+        padding:
+            var(--space-4)
+            var(--space-2);
     }
 
-    .stat:last-child {
-        border-bottom: none;
+    .stat strong {
+        font-size: 2rem;
     }
 
-    .business-grid {
-        grid-template-columns: 1fr;
+    .stat span {
+        font-size: 0.65rem;
+    }
+
+    .cta {
+        padding:
+            var(--space-10)
+            0;
     }
 
 }
