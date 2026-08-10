@@ -1781,3 +1781,56 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   MOBILE HEADER — FINAL OVERRIDE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-inner {
+        min-height: 64px !important;
+        height: 64px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 0 20px !important;
+        position: relative !important;
+    }
+
+    .site-logo {
+        display: flex !important;
+        align-items: baseline !important;
+        gap: 6px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .menu-toggle {
+        position: static !important;
+
+        width: 44px !important;
+        height: 44px !important;
+
+        margin-left: auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .menu-toggle span {
+        width: 25px !important;
+        height: 3px !important;
+        display: block !important;
+    }
+
+}
