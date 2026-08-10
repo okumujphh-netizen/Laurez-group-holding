@@ -1606,3 +1606,89 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   ABOUT PAGE — MOBILE NAVIGATION FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation container */
+
+    header .main-nav {
+        width: 100%;
+    }
+
+
+    /* Navigation list */
+
+    header .main-nav ul {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    /* Navigation items */
+
+    header .main-nav li {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* Navigation links */
+
+    header .main-nav a {
+        display: flex;
+
+        align-items: center;
+
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 12px 20px;
+
+        text-decoration: none;
+
+        white-space: normal;
+    }
+
+
+    /* Dropdown / submenu */
+
+    header .main-nav .dropdown-menu,
+    header .main-nav .submenu {
+        position: static;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-shadow: none;
+
+        border: 0;
+    }
+
+
+    header .main-nav .dropdown-menu a,
+    header .main-nav .submenu a {
+        padding-left: 35px;
+
+        min-height: 44px;
+
+        font-size: 0.9rem;
+    }
+
+}
