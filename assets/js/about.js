@@ -146,3 +146,24 @@ if (aboutDropdown && aboutToggle) {
     });
 
 }
+
+/* =====================================================
+   ABOUT ARROW STATE
+===================================================== */
+
+if (aboutDropdown && aboutToggle) {
+
+    aboutToggle.addEventListener("click", () => {
+
+        const arrow = aboutToggle.querySelector(".dropdown-arrow");
+
+        if (arrow) {
+            arrow.textContent =
+                aboutDropdown.classList.contains("open")
+                    ? "▴"
+                    : "▾";
+        }
+
+    });
+
+}

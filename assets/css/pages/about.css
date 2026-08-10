@@ -1741,3 +1741,25 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   MOBILE ABOUT — ALIGNMENT & ARROW POLISH
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .nav-dropdown-toggle {
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+
+    .dropdown-arrow {
+        font-size: 1rem;
+        transition: transform 0.25s ease;
+    }
+
+    .nav-dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+}
