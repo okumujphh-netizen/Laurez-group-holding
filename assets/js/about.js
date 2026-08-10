@@ -123,3 +123,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+/* =====================================================
+   MOBILE ABOUT DROPDOWN
+===================================================== */
+
+const aboutDropdown = document.querySelector(".nav-dropdown");
+const aboutToggle = document.querySelector(".nav-dropdown-toggle");
+
+if (aboutDropdown && aboutToggle) {
+
+    aboutToggle.addEventListener("click", () => {
+
+        const isOpen = aboutDropdown.classList.toggle("open");
+
+        aboutToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+    });
+
+}

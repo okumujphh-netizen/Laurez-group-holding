@@ -1692,3 +1692,52 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   MOBILE ABOUT DROPDOWN
+========================================================= */
+
+.nav-dropdown-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: none;
+    border: none;
+
+    font: inherit;
+    color: inherit;
+    text-align: left;
+
+    padding: 0;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Closed by default on mobile */
+@media (max-width: 768px) {
+
+    .nav-dropdown-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: flex;
+    }
+
+    .nav-dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu a {
+        display: block;
+        padding-left: 1.5rem;
+    }
+
+}
