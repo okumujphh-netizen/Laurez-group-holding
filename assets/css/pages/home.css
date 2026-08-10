@@ -653,3 +653,644 @@
     }
 
 }
+
+
+/* =========================================================
+   HOMEPAGE ENHANCEMENTS
+   YEAR 24
+   ADD BELOW EXISTING HOMEPAGE CSS
+========================================================= */
+
+
+/* =========================================================
+   HERO ENHANCEMENTS
+========================================================= */
+
+.hero {
+    isolation: isolate;
+}
+
+.hero::before,
+.hero::after {
+    pointer-events: none;
+}
+
+.hero-content {
+    animation: heroContentReveal 0.9s ease-out both;
+}
+
+.hero-label {
+    animation: heroLabelReveal 0.7s ease-out both;
+    animation-delay: 0.15s;
+}
+
+.hero h1 {
+    text-wrap: balance;
+    animation: heroHeadingReveal 0.9s ease-out both;
+    animation-delay: 0.25s;
+}
+
+.hero p {
+    animation: heroParagraphReveal 0.9s ease-out both;
+    animation-delay: 0.4s;
+}
+
+.hero-actions {
+    animation: heroActionsReveal 0.9s ease-out both;
+    animation-delay: 0.55s;
+}
+
+
+/* =========================================================
+   HERO IMAGE DEPTH
+========================================================= */
+
+.hero {
+    background-attachment: scroll;
+}
+
+.hero-content {
+    transform: translateZ(0);
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.section-header h2 {
+    text-wrap: balance;
+}
+
+.section-header p {
+    text-wrap: pretty;
+}
+
+
+/* =========================================================
+   STATISTICS ENHANCEMENTS
+========================================================= */
+
+.statistics {
+    position: relative;
+    overflow: hidden;
+}
+
+.statistics::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(176, 141, 87, 0.7),
+            transparent
+        );
+}
+
+.statistics::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(176, 141, 87, 0.4),
+            transparent
+        );
+}
+
+.statistics-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.stat {
+    position: relative;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stat::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: var(--color-gold);
+
+    transition: width 0.3s ease;
+}
+
+.stat:hover {
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+.stat:hover::after {
+    width: 45px;
+}
+
+
+/* =========================================================
+   BUSINESS CARD ENHANCEMENTS
+========================================================= */
+
+.businesses-preview .business-card {
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.businesses-preview .business-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 0;
+
+    background: var(--color-gold);
+
+    transition: height 0.35s ease;
+}
+
+.businesses-preview .business-card:hover {
+    z-index: 2;
+
+    transform: translateY(-4px);
+
+    background: var(--color-white);
+
+    box-shadow:
+        0 15px 40px
+        rgba(7, 21, 34, 0.08);
+}
+
+.businesses-preview .business-card:hover::before {
+    height: 100%;
+}
+
+
+/* =========================================================
+   BUSINESS GRID PREMIUM BORDER
+========================================================= */
+
+.business-grid {
+    position: relative;
+}
+
+.business-grid::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.18);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PROJECT CARD ENHANCEMENTS
+========================================================= */
+
+.project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(7, 21, 34, 0.10);
+}
+
+.project-image {
+    overflow: hidden;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.015);
+}
+
+.project-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    pointer-events: none;
+}
+
+.project-content {
+    position: relative;
+
+    background: var(--color-white);
+
+    transition:
+        border-color 0.3s ease;
+}
+
+.project-card:hover .project-content {
+    border-color:
+        rgba(176, 141, 87, 0.45);
+}
+
+.project-content h3 {
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+    color: var(--color-gold);
+}
+
+
+/* =========================================================
+   PROJECT CATEGORY LABEL
+========================================================= */
+
+.project-image span {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.project-card:hover .project-image span {
+    transform: translateY(-3px);
+
+    background:
+        var(--color-gold);
+}
+
+
+/* =========================================================
+   SECTION ACTION BUTTON
+========================================================= */
+
+.section-action .btn {
+    position: relative;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.section-action .btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(7, 21, 34, 0.10);
+}
+
+
+/* =========================================================
+   CTA ENHANCEMENTS
+========================================================= */
+
+.cta {
+    isolation: isolate;
+}
+
+.cta::after {
+    content: "";
+
+    position: absolute;
+
+    left: -180px;
+    bottom: -220px;
+
+    width: 500px;
+    height: 500px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.cta .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cta h2 {
+    text-wrap: balance;
+}
+
+.cta .btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cta .btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   GOLD DIVIDERS
+========================================================= */
+
+.introduction::after,
+.businesses-preview::after,
+.projects-preview::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 2px;
+
+    margin:
+        0
+        auto;
+
+    background: var(--color-gold);
+}
+
+
+/* =========================================================
+   IMAGE LOADING / VISUAL POLISH
+========================================================= */
+
+.project-image,
+.hero {
+    background-color:
+        var(--color-primary);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.hero a:focus-visible,
+.cta a:focus-visible,
+.project-card a:focus-visible,
+.businesses-preview a:focus-visible {
+    outline:
+        3px solid
+        var(--color-gold-light);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroContentReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes heroLabelReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+@keyframes heroHeadingReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes heroParagraphReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes heroActionsReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-content,
+    .hero-label,
+    .hero h1,
+    .hero p,
+    .hero-actions {
+
+        animation: none;
+    }
+
+    .businesses-preview .business-card,
+    .project-card,
+    .project-image,
+    .project-image span,
+    .project-content h3,
+    .section-action .btn,
+    .cta .btn {
+
+        transition: none;
+    }
+
+}
+
+
+/* =========================================================
+   HOMEPAGE MOBILE ENHANCEMENTS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .businesses-preview .business-card:hover,
+    .project-card:hover {
+
+        transform: none;
+    }
+
+    .project-card:hover .project-image {
+
+        transform: none;
+    }
+
+    .statistics-grid {
+
+        gap: 1px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero-content {
+
+        max-width: 100%;
+    }
+
+    .hero-actions {
+
+        width: 100%;
+
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .section-action {
+
+        width: 100%;
+    }
+
+    .section-action .btn {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .cta .btn {
+
+        width: 100%;
+    }
+
+}
