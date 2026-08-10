@@ -1,193 +1,125 @@
 /* =========================================================
    LAUREZ GROUP HOLDINGS
-   ABOUT SECTION JAVASCRIPT
-   YEAR 24
+   ABOUT PAGE JAVASCRIPT
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("About JavaScript loaded");
 
 
     /* =====================================================
-       PAGE DETECTION
+       SECTOR EXPLORER
     ===================================================== */
 
-    const page = document.body.dataset.page;
+    const sectorTabs = document.querySelectorAll(".sector-tab");
+    const sectorPanels = document.querySelectorAll(".sector-panel");
 
-    if (page !== "about") {
+
+    console.log("Sector tabs:", sectorTabs.length);
+    console.log("Sector panels:", sectorPanels.length);
+
+
+    if (sectorTabs.length === 0 || sectorPanels.length === 0) {
         return;
     }
 
 
-    /* =====================================================
-       INTERACTIVE SECTOR EXPLORER
-    ===================================================== */
+    sectorTabs.forEach(function (tab) {
 
-    const sectorTabs =
-        document.querySelectorAll(".sector-tab");
+        tab.addEventListener("click", function () {
 
-    const sectorPanels =
-        document.querySelectorAll(".sector-panel");
+            const selectedSector =
+                tab.getAttribute("data-sector");
 
 
-    if (sectorTabs.length && sectorPanels.length) {
+            /* Remove active tab */
 
-        sectorTabs.forEach(tab => {
+            sectorTabs.forEach(function (item) {
 
-            tab.addEventListener("click", () => {
+                item.classList.remove("active");
 
-                const sector =
-                    tab.dataset.sector;
-
-
-                /* Remove active state */
-
-                sectorTabs.forEach(item => {
-
-                    item.classList.remove("active");
-
-                });
+            });
 
 
-                sectorPanels.forEach(panel => {
+            /* Hide all panels */
 
-                    panel.classList.remove("active");
+            sectorPanels.forEach(function (panel) {
 
-                });
+                panel.classList.remove("active");
 
-
-                /* Activate selected tab */
-
-                tab.classList.add("active");
+            });
 
 
-                /* Activate matching panel */
+            /* Activate clicked tab */
 
-                const selectedPanel =
-                    document.querySelector(
-                        `[data-panel="${sector}"]`
+            tab.classList.add("active");
+
+
+            /* Find matching panel */
+
+            const selectedPanel =
+                document.querySelector(
+                    '.sector-panel[data-panel="' +
+                    selectedSector +
+                    '"]'
+                );
+
+
+            /* Show matching panel */
+
+            if (selectedPanel) {
+
+                selectedPanel.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+});
+
+/* =========================================================
+   OUR APPROACH — STRATEGIC PILLARS
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const strategyCards =
+        document.querySelectorAll(".strategy-card");
+
+
+    if (!strategyCards.length) {
+        return;
+    }
+
+
+    strategyCards.forEach(function (card) {
+
+        card.addEventListener("click", function () {
+
+            /* Remove active state from all cards */
+
+            strategyCards.forEach(function (item) {
+
+                if (item !== card) {
+                    item.classList.remove(
+                        "strategy-card-active"
                     );
-
-
-                if (selectedPanel) {
-
-                    selectedPanel.classList.add("active");
-
                 }
 
             });
 
-        });
 
-    }
+            /* Toggle selected card */
 
-
-    /* =====================================================
-       ANIMATED STATISTICS
-    ===================================================== */
-
-    const statistics =
-        document.querySelectorAll(
-            ".about-statistics .stat strong"
-        );
-
-
-    if (statistics.length) {
-
-        const animateCounter = element => {
-
-            const target =
-                parseInt(
-                    element.dataset.target ||
-                    element.textContent.replace(/\D/g, ""),
-                    10
-                );
-
-
-            if (Number.isNaN(target)) {
-                return;
-            }
-
-
-            let current = 0;
-
-            const duration = 1200;
-
-            const increment =
-                Math.max(
-                    1,
-                    Math.ceil(
-                        target / (duration / 30)
-                    )
-                );
-
-
-            const update = () => {
-
-                current += increment;
-
-
-                if (current >= target) {
-
-                    element.textContent =
-                        target;
-
-                    return;
-
-                }
-
-
-                element.textContent =
-                    current;
-
-
-                requestAnimationFrame(update);
-
-            };
-
-
-            element.textContent = "0";
-
-            update();
-
-        };
-
-
-        const statisticsObserver =
-            new IntersectionObserver(
-                entries => {
-
-                    entries.forEach(entry => {
-
-                        if (
-                            entry.isIntersecting &&
-                            !entry.target.dataset.animated
-                        ) {
-
-                            entry.target.dataset.animated =
-                                "true";
-
-                            animateCounter(
-                                entry.target
-                            );
-
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.5
-                }
+            card.classList.toggle(
+                "strategy-card-active"
             );
 
-
-        statistics.forEach(stat => {
-
-            statisticsObserver.observe(stat);
-
         });
 
-    }
-
+    });
 
 });

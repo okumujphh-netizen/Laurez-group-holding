@@ -982,3 +982,627 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   ABOUT US — YEAR 24 ENHANCEMENTS
+   STRATEGIC PILLARS + SECTOR EXPLORER
+========================================================= */
+
+
+/* =========================================================
+   STRATEGIC PILLARS
+========================================================= */
+
+.about-strategy {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-strategy::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -220px;
+    right: -180px;
+
+    border: 1px solid rgba(176, 141, 87, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.strategy-grid {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.strategy-card {
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 38px 30px;
+
+    background: var(--color-white);
+
+    border:
+        1px solid
+        rgba(7, 21, 34, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.strategy-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--color-gold);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.strategy-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(176, 141, 87, 0.35);
+
+    box-shadow:
+        0 18px 45px
+        rgba(7, 21, 34, 0.09);
+}
+
+.strategy-card:hover::before {
+    transform: scaleX(1);
+}
+
+.strategy-number {
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: var(--color-gold);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+.strategy-card h3 {
+    margin-bottom: 15px;
+
+    color: var(--color-primary);
+
+    font-size: 1.25rem;
+}
+
+.strategy-card p {
+    margin: 0;
+
+    color: var(--color-text);
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SECTOR EXPLORER
+========================================================= */
+
+.about-sectors {
+    overflow: hidden;
+}
+
+.sector-explorer {
+    display: grid;
+
+    grid-template-columns:
+        280px minmax(0, 1fr);
+
+    min-height: 430px;
+
+    border:
+        1px solid
+        rgba(7, 21, 34, 0.08);
+
+    background: var(--color-white);
+}
+
+
+/* =========================================================
+   SECTOR TABS
+========================================================= */
+
+.sector-list {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 15px;
+
+    background:
+        var(--color-primary);
+}
+
+.sector-tab {
+    position: relative;
+
+    width: 100%;
+
+    padding: 19px 22px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        padding 0.3s ease;
+}
+
+.sector-tab::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 0;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        var(--color-gold);
+
+    transition:
+        height 0.3s ease;
+}
+
+.sector-tab:hover {
+    color:
+        var(--color-white);
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    padding-left: 28px;
+}
+
+.sector-tab.active {
+    color:
+        var(--color-white);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+.sector-tab.active::before {
+    height: 30px;
+}
+
+
+/* =========================================================
+   SECTOR CONTENT
+========================================================= */
+
+.sector-content {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 60px;
+}
+
+.sector-panel {
+    display: none;
+
+    max-width: 680px;
+
+    animation:
+        sectorPanelReveal
+        0.35s
+        ease-out;
+}
+
+.sector-panel.active {
+    display: block;
+}
+
+.sector-panel .section-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color:
+        var(--color-gold);
+}
+
+.sector-panel h3 {
+    margin-bottom: 20px;
+
+    color:
+        var(--color-primary);
+
+    font-size:
+        clamp(1.6rem, 3vw, 2.2rem);
+
+    line-height: 1.2;
+}
+
+.sector-panel p {
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    line-height: 1.85;
+}
+
+.sector-panel .btn {
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   SECTOR DECORATION
+========================================================= */
+
+.sector-content::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    right: -100px;
+    bottom: -100px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.16);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTOR ANIMATION
+========================================================= */
+
+@keyframes sectorPanelReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   STATISTICS COUNTER ENHANCEMENT
+========================================================= */
+
+.about-statistics .stat strong {
+    min-height: 52px;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+.about-statistics .stat {
+    position: relative;
+}
+
+.about-statistics .stat::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 0;
+    height: 2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        var(--color-gold);
+
+    transition:
+        width 0.35s ease;
+}
+
+.about-statistics .stat:hover::after {
+    width: 40px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .strategy-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .sector-explorer {
+        grid-template-columns:
+            230px minmax(0, 1fr);
+    }
+
+    .sector-content {
+        padding: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .strategy-card {
+        min-height: auto;
+
+        padding: 30px 25px;
+    }
+
+    .strategy-number {
+        margin-bottom: 22px;
+    }
+
+    .sector-explorer {
+        display: block;
+
+        min-height: 0;
+    }
+
+    .sector-list {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        padding: 10px;
+
+        gap: 5px;
+    }
+
+    .sector-tab {
+        padding: 15px;
+
+        border: 0;
+
+        font-size: 0.82rem;
+    }
+
+    .sector-tab:hover {
+        padding-left: 15px;
+    }
+
+    .sector-tab.active::before {
+        display: none;
+    }
+
+    .sector-content {
+        min-height: 360px;
+
+        padding: 40px 30px;
+    }
+
+    .sector-panel h3 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .sector-list {
+        grid-template-columns: 1fr;
+    }
+
+    .sector-tab {
+        padding: 14px 16px;
+    }
+
+    .sector-content {
+        min-height: 390px;
+
+        padding: 32px 22px;
+    }
+
+    .sector-panel h3 {
+        font-size: 1.5rem;
+    }
+
+    .sector-panel p {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.sector-tab:focus-visible {
+    outline:
+        2px solid
+        var(--color-gold);
+
+    outline-offset:
+        -2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .strategy-card,
+    .sector-tab,
+    .sector-panel,
+    .about-statistics .stat::after {
+        transition: none;
+        animation: none;
+    }
+
+}
+
+/* =========================================================
+   STRATEGIC PILLARS — INTERACTIVE STATE
+========================================================= */
+
+.strategy-card {
+    cursor: pointer;
+}
+
+.strategy-card-active {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(176, 141, 87, 0.55);
+
+    box-shadow:
+        0 22px 50px
+        rgba(7, 21, 34, 0.13);
+}
+
+.strategy-card-active::before {
+    transform: scaleX(1);
+}
+
+.strategy-card-active .strategy-number {
+    color: var(--color-primary);
+}
+
+.strategy-card-active h3 {
+    color: var(--color-gold);
+}
+
+
+/* =========================================================
+   STRATEGIC PILLARS — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .strategy-card-active {
+        transform: translateY(-4px);
+    }
+
+}
+
+
+/* =========================================================
+   STRATEGIC PILLARS — ACCESSIBILITY
+========================================================= */
+
+.strategy-card:focus-visible {
+    outline:
+        2px solid
+        var(--color-gold);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   STRATEGIC PILLARS — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .strategy-card {
+        transition: none;
+    }
+
+}
