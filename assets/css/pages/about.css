@@ -1763,3 +1763,54 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   MOBILE MENU TOGGLE — FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-inner {
+        position: relative;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+
+        padding: 0;
+        margin: 0;
+
+        background: transparent;
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 22px;
+        height: 2px;
+
+        background: #0d2233;
+        border-radius: 2px;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+}
