@@ -19,12 +19,10 @@
     overflow: hidden;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             rgba(7, 21, 34, 0.97) 0%,
             rgba(7, 21, 34, 0.88) 45%,
-            rgba(7, 21, 34, 0.65) 100%
-        );
+            rgba(7, 21, 34, 0.65) 100%);
 
     color: var(--color-white);
 }
@@ -46,8 +44,7 @@
     height: 520px;
 
     border:
-        1px solid
-        rgba(176, 141, 87, 0.25);
+        1px solid rgba(176, 141, 87, 0.25);
 
     border-radius: 50%;
 
@@ -67,8 +64,7 @@
     height: 480px;
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.08);
+        1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 50%;
 
@@ -86,8 +82,7 @@
     max-width: 850px;
 
     padding:
-        110px
-        0;
+        110px 0;
 }
 
 
@@ -109,9 +104,7 @@
     max-width: 850px;
 
     margin:
-        0
-        0
-        25px;
+        0 0 25px;
 
     color: var(--color-white);
 
@@ -183,9 +176,7 @@
     max-width: 850px;
 
     margin:
-        12px
-        0
-        18px;
+        12px 0 18px;
 
     text-wrap: balance;
 }
@@ -195,8 +186,7 @@
     max-width: 720px;
 
     margin:
-        0
-        auto;
+        0 auto;
 
     line-height: 1.8;
 }
@@ -211,7 +201,7 @@
 }
 
 
-.two-column > div > .section-label {
+.two-column>div>.section-label {
     display: inline-block;
 
     margin-bottom: 14px;
@@ -228,7 +218,7 @@
 }
 
 
-.two-column p + p {
+.two-column p+p {
     margin-top: 18px;
 }
 
@@ -243,8 +233,7 @@
     overflow: hidden;
 
     border:
-        1px solid
-        rgba(7, 21, 34, 0.08);
+        1px solid rgba(7, 21, 34, 0.08);
 
     background:
         var(--color-white);
@@ -283,8 +272,7 @@
         rgba(176, 141, 87, 0.35);
 
     box-shadow:
-        0 18px 45px
-        rgba(7, 21, 34, 0.09);
+        0 18px 45px rgba(7, 21, 34, 0.09);
 }
 
 
@@ -309,8 +297,7 @@
     margin-bottom: 22px;
 
     border:
-        1px solid
-        rgba(176, 141, 87, 0.35);
+        1px solid rgba(176, 141, 87, 0.35);
 
     color:
         var(--color-gold);
@@ -349,8 +336,7 @@
     position: relative;
 
     padding:
-        55px
-        0;
+        55px 0;
 
     overflow: hidden;
 
@@ -374,12 +360,10 @@
     height: 1px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             transparent,
             rgba(176, 141, 87, 0.7),
-            transparent
-        );
+            transparent);
 }
 
 
@@ -395,12 +379,10 @@
     height: 1px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             transparent,
             rgba(176, 141, 87, 0.4),
-            transparent
-        );
+            transparent);
 }
 
 
@@ -422,8 +404,7 @@
 
 .about-statistics .stat {
     padding:
-        35px
-        25px;
+        35px 25px;
 
     text-align: center;
 
@@ -625,7 +606,7 @@ main .btn:hover {
    CTA
 ========================================================= */
 
-.about-page + .cta,
+.about-page+.cta,
 main .cta {
     position: relative;
 
@@ -651,8 +632,7 @@ main .cta::before {
     height: 500px;
 
     border:
-        1px solid
-        rgba(176, 141, 87, 0.18);
+        1px solid rgba(176, 141, 87, 0.18);
 
     border-radius: 50%;
 
@@ -672,8 +652,7 @@ main .cta::after {
     height: 500px;
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.06);
+        1px solid rgba(255, 255, 255, 0.06);
 
     border-radius: 50%;
 
@@ -700,9 +679,7 @@ main .cta p {
     max-width: 700px;
 
     margin:
-        0
-        auto
-        28px;
+        0 auto 28px;
 
     color:
         rgba(255, 255, 255, 0.78);
@@ -736,8 +713,7 @@ main .cta p {
 .about-page a:focus-visible,
 main a:focus-visible {
     outline:
-        3px solid
-        var(--color-gold);
+        3px solid var(--color-gold);
 
     outline-offset: 4px;
 }
@@ -749,10 +725,7 @@ main a:focus-visible {
 
 .page-hero-content {
     animation:
-        aboutHeroReveal
-        0.9s
-        ease-out
-        both;
+        aboutHeroReveal 0.9s ease-out both;
 }
 
 
@@ -788,8 +761,7 @@ main a:focus-visible {
 
     .page-hero-content {
         padding:
-            90px
-            0;
+            90px 0;
     }
 
 
@@ -828,8 +800,7 @@ main a:focus-visible {
 
     .page-hero-content {
         padding:
-            75px
-            0;
+            75px 0;
     }
 
 
@@ -850,8 +821,7 @@ main a:focus-visible {
 
     .about-statistics {
         padding:
-            35px
-            0;
+            35px 0;
     }
 
 
@@ -863,8 +833,7 @@ main a:focus-visible {
 
     .about-statistics .stat {
         padding:
-            28px
-            15px;
+            28px 15px;
     }
 
 
@@ -926,8 +895,7 @@ main a:focus-visible {
 
     .page-hero-content {
         padding:
-            65px
-            0;
+            65px 0;
     }
 
 
@@ -950,8 +918,7 @@ main a:focus-visible {
 
     .about-statistics .stat {
         padding:
-            25px
-            20px;
+            25px 20px;
     }
 
 
@@ -1038,8 +1005,7 @@ main a:focus-visible {
     background: var(--color-white);
 
     border:
-        1px solid
-        rgba(7, 21, 34, 0.08);
+        1px solid rgba(7, 21, 34, 0.08);
 
     overflow: hidden;
 
@@ -1077,8 +1043,7 @@ main a:focus-visible {
         rgba(176, 141, 87, 0.35);
 
     box-shadow:
-        0 18px 45px
-        rgba(7, 21, 34, 0.09);
+        0 18px 45px rgba(7, 21, 34, 0.09);
 }
 
 .strategy-card:hover::before {
@@ -1133,8 +1098,7 @@ main a:focus-visible {
     min-height: 430px;
 
     border:
-        1px solid
-        rgba(7, 21, 34, 0.08);
+        1px solid rgba(7, 21, 34, 0.08);
 
     background: var(--color-white);
 }
@@ -1165,8 +1129,7 @@ main a:focus-visible {
     border: 0;
 
     border-bottom:
-        1px solid
-        rgba(255, 255, 255, 0.08);
+        1px solid rgba(255, 255, 255, 0.08);
 
     background: transparent;
 
@@ -1251,9 +1214,7 @@ main a:focus-visible {
     max-width: 680px;
 
     animation:
-        sectorPanelReveal
-        0.35s
-        ease-out;
+        sectorPanelReveal 0.35s ease-out;
 }
 
 .sector-panel.active {
@@ -1310,8 +1271,7 @@ main a:focus-visible {
     bottom: -100px;
 
     border:
-        1px solid
-        rgba(176, 141, 87, 0.16);
+        1px solid rgba(176, 141, 87, 0.16);
 
     border-radius: 50%;
 
@@ -1513,8 +1473,7 @@ main a:focus-visible {
 
 .sector-tab:focus-visible {
     outline:
-        2px solid
-        var(--color-gold);
+        2px solid var(--color-gold);
 
     outline-offset:
         -2px;
@@ -1552,8 +1511,7 @@ main a:focus-visible {
         rgba(176, 141, 87, 0.55);
 
     box-shadow:
-        0 22px 50px
-        rgba(7, 21, 34, 0.13);
+        0 22px 50px rgba(7, 21, 34, 0.13);
 }
 
 .strategy-card-active::before {
@@ -1588,8 +1546,7 @@ main a:focus-visible {
 
 .strategy-card:focus-visible {
     outline:
-        2px solid
-        var(--color-gold);
+        2px solid var(--color-gold);
 
     outline-offset: 3px;
 }
@@ -1811,6 +1768,16 @@ main a:focus-visible {
         transition:
             transform 0.3s ease,
             opacity 0.3s ease;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
     }
 
 }
