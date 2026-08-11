@@ -167,3 +167,74 @@ if (aboutDropdown && aboutToggle) {
     });
 
 }
+
+/* =========================================================
+   HISTORY PAGE — TIMELINE REVEAL
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const timelineItems =
+        document.querySelectorAll(".timeline-item");
+
+
+    if (!timelineItems.length) {
+        return;
+    }
+
+
+    /* =====================================================
+       INITIAL STATE
+    ===================================================== */
+
+    timelineItems.forEach(function (item) {
+
+        item.classList.add("timeline-hidden");
+
+    });
+
+
+    /* =====================================================
+       INTERSECTION OBSERVER
+    ===================================================== */
+
+    const timelineObserver =
+        new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+
+                    entry.target.classList.add(
+                        "timeline-visible"
+                    );
+
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+    /* =====================================================
+       OBSERVE TIMELINE ITEMS
+    ===================================================== */
+
+    timelineItems.forEach(function (item) {
+
+        timelineObserver.observe(item);
+
+    });
+
+});
