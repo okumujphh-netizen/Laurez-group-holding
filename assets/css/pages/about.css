@@ -2470,3 +2470,601 @@ main a:focus-visible {
     }
 
 }
+
+
+/* =========================================================
+   LEADERSHIP PAGE
+========================================================= */
+
+
+/* =========================================================
+   LEADERSHIP SECTION
+========================================================= */
+
+.leadership-section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LEADER CARDS
+========================================================= */
+
+.leader-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    border: 1px solid rgba(7, 21, 34, 0.08);
+
+    box-shadow:
+        0 12px 35px rgba(7, 21, 34, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.leader-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(176, 141, 87, 0.35);
+
+    box-shadow:
+        0 22px 50px rgba(7, 21, 34, 0.12);
+}
+
+
+/* =========================================================
+   LEADER IMAGE
+========================================================= */
+
+.leader-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 4.5;
+
+    overflow: hidden;
+
+    background:
+        var(--color-primary);
+}
+
+
+.leader-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(7, 21, 34, 0.35),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LEADER CONTENT
+========================================================= */
+
+.leader-content {
+    position: relative;
+
+    padding: 28px 30px 32px;
+}
+
+
+.leader-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+
+    width: 45px;
+    height: 3px;
+
+    background:
+        var(--color-gold);
+
+    transition:
+        width 0.35s ease;
+}
+
+
+.leader-card:hover .leader-content::before {
+    width: 80px;
+}
+
+
+/* =========================================================
+   LEADER ROLE
+========================================================= */
+
+.leader-role {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--color-gold);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   LEADER NAME / TITLE
+========================================================= */
+
+.leader-content h3 {
+    margin-bottom: 12px;
+
+    color:
+        var(--color-primary);
+
+    font-size: 1.25rem;
+
+    line-height: 1.3;
+}
+
+
+.leader-content p {
+    margin: 0;
+
+    color:
+        var(--color-text);
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MANAGEMENT CARDS
+========================================================= */
+
+.management-section {
+    background:
+        rgba(7, 21, 34, 0.025);
+}
+
+
+.management-section .feature-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(7, 21, 34, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.management-section .feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        var(--color-gold);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.management-section .feature-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(176, 141, 87, 0.3);
+
+    box-shadow:
+        0 18px 40px
+        rgba(7, 21, 34, 0.08);
+}
+
+
+.management-section .feature-card:hover::before {
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   LEADERSHIP PRINCIPLES
+========================================================= */
+
+.feature-card-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 24px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.35);
+
+    color:
+        var(--color-gold);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.grid-4 .feature-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.grid-4 .feature-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(176, 141, 87, 0.3);
+
+    box-shadow:
+        0 16px 35px
+        rgba(7, 21, 34, 0.08);
+}
+
+
+/* =========================================================
+   INLINE GOVERNANCE CTA
+========================================================= */
+
+.cta-inline {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 55px 60px;
+
+    background:
+        var(--color-primary);
+
+    color:
+        var(--color-white);
+}
+
+
+.cta-inline h2 {
+    max-width: 650px;
+
+    margin-bottom: 15px;
+
+    color:
+        var(--color-white);
+}
+
+
+.cta-inline p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    line-height: 1.8;
+}
+
+
+.cta-inline .section-label {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color:
+        var(--color-gold);
+}
+
+
+.cta-inline .btn {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .leader-content {
+        padding: 25px;
+    }
+
+    .cta-inline {
+        padding: 45px;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .leader-image {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .leader-content {
+        padding: 25px 22px 28px;
+    }
+
+
+    .leader-content::before {
+        left: 22px;
+    }
+
+
+    .leader-content h3 {
+        font-size: 1.15rem;
+    }
+
+
+    .leader-content p {
+        font-size: 0.94rem;
+    }
+
+
+    .management-section .feature-card {
+        padding: 28px 24px;
+    }
+
+
+    .feature-card-icon {
+        margin-bottom: 20px;
+    }
+
+
+    .cta-inline {
+
+        display: block;
+
+        padding: 40px 28px;
+    }
+
+
+    .cta-inline h2 {
+        font-size: 1.6rem;
+    }
+
+
+    .cta-inline p {
+        font-size: 0.94rem;
+
+        margin-bottom: 28px;
+    }
+
+
+    .cta-inline .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .leader-image {
+        aspect-ratio: 1 / 1.05;
+    }
+
+
+    .leader-content {
+        padding: 23px 20px 26px;
+    }
+
+
+    .leader-content::before {
+        left: 20px;
+    }
+
+
+    .leader-role {
+        font-size: 0.62rem;
+    }
+
+
+    .leader-content h3 {
+        font-size: 1.08rem;
+    }
+
+
+    .leader-content p {
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+    }
+
+
+    .cta-inline {
+        padding: 34px 22px;
+    }
+
+
+    .cta-inline h2 {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .leader-card,
+    .leader-image img,
+    .leader-content::before,
+    .management-section .feature-card,
+    .management-section .feature-card::before,
+    .grid-4 .feature-card {
+
+        transition: none;
+    }
+
+}
+
+/* =========================================================
+   LEADERSHIP JAVASCRIPT STATES
+========================================================= */
+
+.leadership-hidden {
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+}
+
+
+.leadership-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   SELECTED LEADER
+========================================================= */
+
+.leader-card.leader-selected {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--color-gold);
+
+    box-shadow:
+        0 25px 55px
+        rgba(176, 141, 87, 0.16);
+}
+
+
+.leader-card.leader-selected .leader-content::before {
+    width: 80px;
+}
+
+
+/* =========================================================
+   KEYBOARD ACCESSIBILITY
+========================================================= */
+
+.leader-card:focus-visible {
+
+    outline:
+        2px solid
+        var(--color-gold);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .leadership-hidden,
+    .leadership-visible {
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+}

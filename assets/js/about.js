@@ -238,3 +238,141 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   LEADERSHIP PAGE JAVASCRIPT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const leaderCards =
+        document.querySelectorAll(".leader-card");
+
+    if (!leaderCards.length) {
+        return;
+    }
+
+
+    /* =====================================================
+       EXECUTIVE CARD INTERACTION
+    ===================================================== */
+
+    leaderCards.forEach((card) => {
+
+        card.setAttribute("tabindex", "0");
+
+        card.addEventListener("click", () => {
+
+            leaderCards.forEach((otherCard) => {
+
+                if (otherCard !== card) {
+                    otherCard.classList.remove("leader-selected");
+                }
+
+            });
+
+            card.classList.toggle("leader-selected");
+
+        });
+
+
+        /* Keyboard accessibility */
+
+        card.addEventListener("keydown", (event) => {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                card.click();
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    const animatedCards = document.querySelectorAll(
+        ".leader-card, .management-section .feature-card, .grid-4 .feature-card"
+    );
+
+
+    if (
+        "IntersectionObserver" in window &&
+        animatedCards.length
+    ) {
+
+        const observer =
+            new IntersectionObserver(
+                (entries, observer) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "leadership-visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        animatedCards.forEach((card, index) => {
+
+            card.classList.add(
+                "leadership-hidden"
+            );
+
+            card.style.transitionDelay =
+                `${index * 80}ms`;
+
+            observer.observe(card);
+
+        });
+
+    }
+
+
+    /* =====================================================
+       RESET TRANSITION DELAY AFTER ANIMATION
+    ===================================================== */
+
+    animatedCards.forEach((card) => {
+
+        card.addEventListener(
+            "transitionend",
+            () => {
+
+                card.style.transitionDelay = "";
+
+            },
+            {
+                once: true
+            }
+        );
+
+    });
+
+});
