@@ -3068,3 +3068,89 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   CLEAN EXECUTIVE IMAGES
+========================================================= */
+
+.leader-image {
+    position: relative;
+
+    width: 100%;
+    height: 390px;
+
+    overflow: hidden;
+
+    background: #f2f2f0;
+
+    border-bottom:
+        1px solid
+        rgba(7, 21, 34, 0.08);
+}
+
+
+.leader-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* Very subtle hover movement */
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.025);
+}
+
+
+/* Remove the heavy overlay */
+
+.leader-image::after {
+    display: none;
+}
+
+/* =========================================================
+   MOBILE EXECUTIVE IMAGES
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .leader-image {
+        height: 340px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .leader-image {
+        height: 300px;
+    }
+
+}
+
+.leader-card {
+    border-radius: 2px;
+
+    overflow: hidden;
+
+    background:
+        var(--color-white);
+
+    box-shadow:
+        0 8px 25px
+        rgba(7, 21, 34, 0.06);
+}
+
+.leader-content {
+    padding: 30px 30px 32px;
+}
