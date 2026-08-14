@@ -493,3 +493,65 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tabs = document.querySelectorAll(".direction-tab");
+    const panels = document.querySelectorAll(".direction-panel");
+
+    if (!tabs.length || !panels.length) {
+        return;
+    }
+
+    tabs.forEach(function (tab) {
+
+        tab.addEventListener("click", function () {
+
+            const target =
+                tab.getAttribute("data-direction");
+
+            tabs.forEach(function (item) {
+
+                item.classList.remove("active");
+
+                item.setAttribute(
+                    "aria-selected",
+                    "false"
+                );
+
+            });
+
+
+            panels.forEach(function (panel) {
+
+                panel.classList.remove("active");
+
+            });
+
+
+            tab.classList.add("active");
+
+            tab.setAttribute(
+                "aria-selected",
+                "true"
+            );
+
+
+            const targetPanel =
+                document.querySelector(
+                    `.direction-panel[data-panel="${target}"]`
+                );
+
+
+            if (targetPanel) {
+
+                targetPanel.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+});
