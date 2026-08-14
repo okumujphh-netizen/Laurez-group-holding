@@ -3155,3 +3155,150 @@ main a:focus-visible {
     padding: 30px 30px 32px;
 }
 
+/* =========================================================
+   BOARD MEMBER INTERACTION
+========================================================= */
+
+.board-member-card {
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.board-member-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.board-member-card.board-member-open {
+    transform: translateY(-7px);
+
+    border-color:
+        var(--color-gold);
+
+    box-shadow:
+        0 20px 45px
+        rgba(7, 21, 34, 0.12);
+}
+
+
+/* Gold indicator */
+
+.board-member-card .leader-content {
+    position: relative;
+}
+
+
+.board-member-card .leader-content::after {
+    content: "+";
+
+    position: absolute;
+
+    top: 30px;
+    right: 30px;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.35);
+
+    color:
+        var(--color-gold);
+
+    font-size: 1rem;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.board-member-card.board-member-open
+.leader-content::after {
+
+    content: "−";
+
+    background:
+        var(--color-gold);
+
+    color:
+        var(--color-white);
+
+    transform: rotate(180deg);
+}
+
+
+/* Slightly reveal more content when selected */
+
+.board-member-card.board-member-open
+.leader-content {
+
+    min-height: 190px;
+}
+
+
+/* Keyboard accessibility */
+
+.board-member-card:focus-visible {
+
+    outline:
+        2px solid
+        var(--color-gold);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .board-member-card .leader-content::after {
+
+        top: 25px;
+        right: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .board-member-card .leader-content::after {
+
+        top: 22px;
+        right: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .board-member-card,
+    .board-member-card .leader-content::after {
+
+        transition: none;
+    }
+
+}

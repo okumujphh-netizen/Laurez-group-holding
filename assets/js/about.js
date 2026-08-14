@@ -376,3 +376,75 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+/* =========================================================
+   LAUREZ GROUP HOLDINGS
+   BOARD OF DIRECTORS JAVASCRIPT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const boardMembers =
+        document.querySelectorAll(".board-member-card");
+
+    if (!boardMembers.length) {
+        return;
+    }
+
+
+    boardMembers.forEach((member) => {
+
+        member.setAttribute("tabindex", "0");
+
+        member.addEventListener("click", () => {
+
+            const isOpen =
+                member.classList.contains("board-member-open");
+
+
+            /* Close every other member */
+
+            boardMembers.forEach((otherMember) => {
+
+                otherMember.classList.remove(
+                    "board-member-open"
+                );
+
+            });
+
+
+            /* Open selected member */
+
+            if (!isOpen) {
+
+                member.classList.add(
+                    "board-member-open"
+                );
+
+            }
+
+        });
+
+
+        /* Keyboard support */
+
+        member.addEventListener("keydown", (event) => {
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                member.click();
+
+            }
+
+        });
+
+    });
+
+});
+
