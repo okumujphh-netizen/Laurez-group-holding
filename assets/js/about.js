@@ -448,3 +448,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/*==========================================================
+    LAUREZ GROUP HOLDINGS
+    GOVERNANCE PAGE JAVASCRIPT
+    ========================================================= */
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tabs = document.querySelectorAll(".governance-tab");
+    const panels = document.querySelectorAll(".governance-panel");
+
+    if (!tabs.length || !panels.length) {
+        return;
+    }
+
+    tabs.forEach(function (tab) {
+
+        tab.addEventListener("click", function () {
+
+            const target = tab.dataset.governance;
+
+            tabs.forEach(function (item) {
+                item.classList.remove("active");
+            });
+
+            panels.forEach(function (panel) {
+                panel.classList.remove("active");
+            });
+
+            tab.classList.add("active");
+
+            const targetPanel =
+                document.querySelector(
+                    `.governance-panel[data-panel="${target}"]`
+                );
+
+            if (targetPanel) {
+                targetPanel.classList.add("active");
+            }
+
+        });
+
+    });
+
+});
