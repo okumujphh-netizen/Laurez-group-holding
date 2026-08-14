@@ -5227,3 +5227,771 @@ main a:focus-visible {
     }
 
 }
+
+/* =========================================================
+   MISSION & VISION — PREMIUM PAGE ENHANCEMENTS
+   CSS ONLY — JAVASCRIPT UNCHANGED
+========================================================= */
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -240px;
+    top: -300px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: 80px;
+    bottom: -210px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   GENERAL SECTION HEADERS
+========================================================= */
+
+.mission-vision-explorer .section-header,
+.section-alt .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.mission-vision-explorer .section-description,
+.section-alt .section-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   MISSION / VISION TWO-COLUMN SECTIONS
+========================================================= */
+
+.mission-vision-explorer
+~ .section .two-column {
+    align-items: center;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.mission-vision-explorer
+~ .section .feature-card,
+.mission-vision-explorer
++ .section .feature-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(7, 21, 34, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.mission-vision-explorer
+~ .section .feature-card::before,
+.mission-vision-explorer
++ .section .feature-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        var(--color-gold);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.mission-vision-explorer
+~ .section .feature-card:hover,
+.mission-vision-explorer
++ .section .feature-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(176, 141, 87, 0.28);
+
+    box-shadow:
+        0 18px 45px
+        rgba(7, 21, 34, 0.09);
+}
+
+
+.mission-vision-explorer
+~ .section .feature-card:hover::before,
+.mission-vision-explorer
++ .section .feature-card:hover::before {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   MISSION PILLARS
+========================================================= */
+
+.mission-vision-explorer
+~ .section
+.grid-4 {
+
+    gap:
+        18px;
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-4 .feature-card {
+
+    min-height:
+        235px;
+
+    padding:
+        34px 28px;
+}
+
+
+.feature-card-icon {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    margin-bottom:
+        28px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.35);
+
+    color:
+        var(--color-gold);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+/* =========================================================
+   STRATEGIC PRIORITIES
+========================================================= */
+
+.mission-vision-explorer
+~ .section
+.grid-3 {
+
+    gap:
+        18px;
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-3 .feature-card {
+
+    position:
+        relative;
+
+    min-height:
+        205px;
+
+    padding:
+        32px 28px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(7, 21, 34, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-3 .feature-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        80px;
+
+    height:
+        80px;
+
+    right:
+        -45px;
+
+    top:
+        -45px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.12);
+
+    border-radius:
+        50%;
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-3 .feature-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(176, 141, 87, 0.28);
+
+    box-shadow:
+        0 15px 38px
+        rgba(7, 21, 34, 0.08);
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-3 .feature-card h3 {
+
+    margin-bottom:
+        14px;
+
+    color:
+        var(--color-primary);
+}
+
+
+/* =========================================================
+   YEAR 24 SECTION
+========================================================= */
+
+.mission-vision-explorer
+~ .section
+.two-column > div:first-child {
+
+    position:
+        relative;
+}
+
+
+.mission-vision-explorer
+~ .section
+.two-column > div:first-child::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        55px;
+
+    height:
+        2px;
+
+    margin-top:
+        25px;
+
+    background:
+        var(--color-gold);
+}
+
+
+/* =========================================================
+   VALUES + GOVERNANCE CARDS
+========================================================= */
+
+.mission-vision-explorer
+~ .section
+.two-column .feature-card {
+
+    padding:
+        38px 34px;
+}
+
+
+.mission-vision-explorer
+~ .section
+.two-column .feature-card .section-label {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--color-gold);
+}
+
+
+.mission-vision-explorer
+~ .section
+.two-column .feature-card h3 {
+
+    margin-bottom:
+        16px;
+}
+
+
+/* =========================================================
+   RELATED PAGES
+========================================================= */
+
+.mission-vision-explorer
+~ .section
+.grid-4 a.feature-card {
+
+    display:
+        block;
+
+    min-height:
+        190px;
+
+    padding:
+        30px;
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-4 a.feature-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 42px
+        rgba(7, 21, 34, 0.09);
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-4 a.feature-card h3 {
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--color-primary);
+}
+
+
+.mission-vision-explorer
+~ .section
+.grid-4 a.feature-card p {
+
+    margin:
+        0;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.cta::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        430px;
+
+    height:
+        430px;
+
+    right:
+        -220px;
+
+    top:
+        -250px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.18);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+}
+
+
+.cta::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    left:
+        -100px;
+
+    bottom:
+        -110px;
+
+    border:
+        1px solid
+        rgba(176, 141, 87, 0.10);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+}
+
+
+.cta .container {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+.cta .about-page-actions {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    margin-top:
+        28px;
+}
+
+
+/* =========================================================
+   BUTTON POLISH
+========================================================= */
+
+.mission-vision-explorer
+~ .section .btn,
+.cta .btn {
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.mission-vision-explorer
+~ .section .btn:hover,
+.cta .btn:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-hero::before {
+
+        width:
+            350px;
+
+        height:
+            350px;
+
+        right:
+            -220px;
+    }
+
+
+    .mission-vision-explorer
+    ~ .section
+    .grid-4,
+    .mission-vision-explorer
+    ~ .section
+    .grid-3 {
+
+        gap:
+            14px;
+    }
+
+
+    .mission-vision-explorer
+    ~ .section
+    .grid-4 .feature-card {
+
+        min-height:
+            auto;
+
+        padding:
+            28px 24px;
+    }
+
+
+    .mission-vision-explorer
+    ~ .section
+    .grid-3 .feature-card {
+
+        min-height:
+            auto;
+
+        padding:
+            28px 24px;
+    }
+
+
+    .mission-vision-explorer
+    ~ .section
+    .two-column .feature-card {
+
+        padding:
+            30px 25px;
+    }
+
+
+    .cta .about-page-actions {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+
+    .cta .about-page-actions .btn {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page-hero::before {
+
+        width:
+            280px;
+
+        height:
+            280px;
+
+        right:
+            -190px;
+
+        top:
+            -150px;
+    }
+
+
+    .feature-card-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        margin-bottom:
+            22px;
+    }
+
+
+    .mission-vision-explorer
+    ~ .section
+    .grid-4 a.feature-card {
+
+        min-height:
+            auto;
+
+        padding:
+            26px 22px;
+    }
+
+
+    .cta .about-page-actions {
+
+        gap:
+            10px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mission-vision-explorer
+    ~ .section
+    .feature-card,
+    .mission-vision-explorer
+    ~ .section
+    .grid-3 .feature-card,
+    .mission-vision-explorer
+    ~ .section
+    .grid-4 a.feature-card,
+    .cta .btn {
+
+        transition:
+            none;
+    }
+
+}
