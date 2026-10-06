@@ -363,3 +363,760 @@
     }
 
 }
+/* =====================================================
+   LAUREZ GROUP HOLDINGS
+   BUSINESSES PAGE
+===================================================== */
+
+
+/* =====================================================
+   PAGE HERO
+===================================================== */
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8, 24, 48, 0.98),
+            rgba(13, 42, 78, 0.96)
+        );
+
+    color: #ffffff;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -120px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    bottom: -450px;
+    left: -200px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    padding: 80px 0;
+}
+
+.page-hero .section-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #d4af37;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    margin: 0 0 24px;
+
+    max-width: 800px;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+}
+
+.page-hero p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BUSINESS INTRO
+===================================================== */
+
+.business-intro {
+    padding: 110px 0;
+}
+
+.business-intro .two-column {
+    align-items: center;
+}
+
+.business-intro h2 {
+    max-width: 600px;
+
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.business-intro p {
+    max-width: 650px;
+
+    color: #5f6b7a;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   BUSINESS PORTFOLIO
+===================================================== */
+
+.business-portfolio {
+    padding: 110px 0;
+    background: #f5f7fa;
+}
+
+.business-portfolio .section-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.business-portfolio .section-header h2 {
+    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    line-height: 1.1;
+}
+
+
+/* =====================================================
+   BUSINESS GRID
+===================================================== */
+
+.business-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+/* =====================================================
+   BUSINESS CARD
+===================================================== */
+
+.business-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 390px;
+
+    padding: 38px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e9ef;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(10, 30, 55, 0.05);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.business-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #d4af37;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.35s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(212, 175, 55, 0.45);
+
+    box-shadow:
+        0 22px 55px rgba(10, 30, 55, 0.12);
+}
+
+.business-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   BUSINESS NUMBER
+===================================================== */
+
+.business-number {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 30px;
+
+    border-radius: 50%;
+
+    background: #081830;
+    color: #d4af37;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.business-card:hover .business-number {
+    background: #d4af37;
+    color: #081830;
+
+    transform: rotate(8deg);
+}
+
+
+/* =====================================================
+   BUSINESS CARD CONTENT
+===================================================== */
+
+.business-card h3 {
+    margin: 0 0 16px;
+
+    color: #081830;
+
+    font-size: 1.45rem;
+    line-height: 1.25;
+}
+
+.business-card p {
+    margin: 0;
+
+    color: #657180;
+
+    line-height: 1.75;
+}
+
+.business-card-content {
+    flex: 1;
+}
+
+
+/* =====================================================
+   BUSINESS CATEGORY
+===================================================== */
+
+.business-category {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #a27c12;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.business-card-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    color: #081830;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+
+    transition:
+        gap 0.3s ease,
+        color 0.3s ease;
+}
+
+.business-card-link::after {
+    content: "→";
+
+    font-size: 1.1rem;
+}
+
+.business-card:hover .business-card-link {
+    gap: 16px;
+    color: #a27c12;
+}
+
+
+/* =====================================================
+   FEATURED BUSINESS
+===================================================== */
+
+.business-card.featured {
+    grid-column: span 2;
+
+    min-height: 430px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #081830,
+            #102f54
+        );
+
+    border-color: transparent;
+
+    color: #ffffff;
+}
+
+.business-card.featured h3 {
+    color: #ffffff;
+
+    font-size: 2rem;
+}
+
+.business-card.featured p {
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.business-card.featured .business-category {
+    color: #d4af37;
+}
+
+.business-card.featured .business-card-link {
+    color: #ffffff;
+}
+
+.business-card.featured .business-number {
+    background: #d4af37;
+    color: #081830;
+}
+
+.business-card.featured:hover {
+    box-shadow:
+        0 25px 65px rgba(8, 24, 48, 0.25);
+}
+
+
+/* =====================================================
+   SECTOR SECTION
+===================================================== */
+
+.business-sectors {
+    padding: 110px 0;
+}
+
+.business-sectors .section-header {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+
+/* =====================================================
+   SECTOR GRID
+===================================================== */
+
+.sector-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.sector-item {
+    position: relative;
+
+    padding: 30px;
+
+    min-height: 190px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e9ef;
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sector-item:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(212, 175, 55, 0.5);
+
+    box-shadow:
+        0 15px 35px rgba(10, 30, 55, 0.08);
+}
+
+.sector-item span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d4af37;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.sector-item h3 {
+    margin: 0 0 10px;
+
+    color: #081830;
+
+    font-size: 1.15rem;
+}
+
+.sector-item p {
+    margin: 0;
+
+    color: #6b7684;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PORTFOLIO STATISTICS
+===================================================== */
+
+.business-stats {
+    padding: 90px 0;
+
+    background: #081830;
+
+    color: #ffffff;
+}
+
+.business-stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.business-stat {
+    padding: 25px;
+
+    text-align: center;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.business-stat:last-child {
+    border-right: none;
+}
+
+.business-stat-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d4af37;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.business-stat-label {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   BUSINESS CTA
+===================================================== */
+
+.business-cta {
+    position: relative;
+
+    padding: 120px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fa,
+            #ffffff
+        );
+
+    text-align: center;
+}
+
+.business-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: -300px;
+    right: -100px;
+
+    border: 1px solid rgba(8, 24, 48, 0.06);
+
+    border-radius: 50%;
+}
+
+.business-cta .container {
+    position: relative;
+    z-index: 2;
+}
+
+.business-cta h2 {
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    color: #081830;
+
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: 1.1;
+}
+
+.business-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #657180;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.business-cta .btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+
+    padding: 14px 25px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.business-cta .btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(8, 24, 48, 0.15);
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.business-card:focus-visible,
+.sector-item:focus-visible,
+.business-cta .btn:focus-visible {
+    outline: 3px solid #d4af37;
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .business-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-card.featured {
+        grid-column: span 2;
+    }
+
+    .sector-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-stat:nth-child(2) {
+        border-right: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .page-hero {
+        min-height: 440px;
+    }
+
+    .page-hero-content {
+        padding: 60px 0;
+    }
+
+    .business-intro,
+    .business-portfolio,
+    .business-sectors {
+        padding: 80px 0;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-card,
+    .business-card.featured {
+        grid-column: span 1;
+
+        min-height: auto;
+    }
+
+    .business-card.featured h3 {
+        font-size: 1.7rem;
+    }
+
+    .sector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-stats {
+        padding: 70px 0;
+    }
+
+    .business-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .business-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .business-stat:nth-last-child(-n + 2) {
+        border-bottom: none;
+    }
+
+    .business-cta {
+        padding: 85px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .page-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .page-hero p {
+        font-size: 1rem;
+    }
+
+    .business-card {
+        padding: 28px;
+    }
+
+    .business-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .business-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-stat {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .business-stat:last-child {
+        border-bottom: none;
+    }
+}
